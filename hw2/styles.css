@@ -13,8 +13,9 @@
 }
 
 body {
-  font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 1.2em;
+  margin: 0;
   color: var(--black);
 }
 
@@ -28,8 +29,220 @@ form {
 
 /* Code for exercise 01-navbar */
 
+nav {
+  width: 100%;
+  background-color: var(--black);
+  text-align: center;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
+  display: block;
+  padding: 1em;
+  text-decoration: none;
+  color: var(--white);
+}
+
+nav ul li a:hover {
+  background-color: var(--violetred);
+}
+
+.header {
+  padding: 0 0.1em;
+}
+
+@media (max-width: 414px) {
+  nav li {
+    width: 24%;
+  }
+}
+
+@media (min-width: 1024px) {
+  nav {
+    text-align: right;
+  }
+}
+
 /* Code for exercise 02-cards */
 
+.card {
+  border: 1px solid black;
+  margin: 18px;
+  padding: 20px;
+  text-align: center;
+}
+
+.card p {
+  text-align: left;
+}
+
+.card button {
+  width: 100%;
+  height: 3em;
+  border: none;
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.card button:hover {
+  background-color: var(--violetred);
+}
+
+@media (min-width: 1024px) {
+  .card {
+    display: inline-block;
+    width: 312px;
+    margin: 12px;
+  }
+}
+
 /* Code for exercise 03-table */
+table {
+  margin: 0px auto;
+}
+
+table td {
+  border: 1px solid #333;
+}
+
+thead {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+th {
+  width: 12em;
+  height: 3em;
+}
+
+td {
+  width: 12em;
+  height: 3em;
+  padding: 0.9em;
+}
+
+td:first-child {
+  background-color: var(--violetred);
+  color: var(--white);
+  font-weight: bold;
+  text-align: center;
+}
+
+table tr:not(thead tr:first-child):hover {
+  background-color: var(--orange);
+}
+
+@media (max-width: 414px) {
+  table {
+    margin: 12px;
+  }
+}
 
 /* Code for exercise 04-form */
+
+.form-container h1 {
+  font-size: 1.5em;
+  margin: 1em;
+}
+
+.form {
+  width: 398px;
+  padding: 1.5em 0;
+  margin: 0 auto;
+  border-radius: 8px;
+  border: 1px solid var(--black);
+}
+
+.form-fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.form h2 {
+  font-size: larger;
+  margin: 10px;
+}
+.form p {
+  font-size: 1em;
+  font-weight: normal;
+  color: var(--gray);
+  margin: 10px;
+}
+
+.form-field {
+  margin: 10px;
+  font-size: medium;
+}
+
+.form-input-field {
+  width: 380px;
+  height: 1.2em;
+  display: flex;
+  font-weight: bold;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form-input {
+  height: 1.8em;
+}
+
+.label-bold {
+  font-weight: bold;
+}
+
+.form-field-date {
+  width: 14.2em;
+}
+
+.btn {
+  display: flex;
+  flex-direction: row;
+}
+
+.form-btn {
+  width: 50%;
+  height: 2.5em;
+  margin-left: 10px;
+  width: 13em;
+}
+
+.form-btn__submit {
+  border: 1px solid var(--black);
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.form-btn__reset {
+  border: 1px solid var(--black);
+  background-color: var(--white);
+  color: var(--black);
+}
+
+.form-btn__reset:hover {
+  background-color: lightgray;
+}
+
+.form-btn__submit:hover {
+  border: 1px solid var(--violetred);
+  background-color: var(--violetred);
+  color: var(--white);
+}
+
+@media (max-width: 414px) {
+  .form {
+    margin: 0.5em;
+  }
+}
