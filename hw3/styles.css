@@ -19,7 +19,7 @@ html {
 }
 
 body {
-  font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 1.2em;
   color: var(--black);
 }
@@ -34,20 +34,208 @@ form {
 }
 
 /* Code for exercise 01-hello */
+.img {
+  display: block;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+
+.bio {
+  margin: 20px auto;
+  width: 300px;
+}
 
 /* Code for exercise 02-form */
 
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 42%;
+  padding: 1em 0;
+  margin: auto;
+  border-radius: 8px;
+  border: 1px solid var(--black);
+}
+
+.form-header {
+  font-size: larger;
+  width: 100%;
+  padding: 0px 10px;
+  margin-bottom: 0px;
+}
+
+.form-filler-text {
+  font-weight: normal;
+  color: var(--gray);
+  width: 100%;
+  padding: 0px 10px;
+}
+
+.form-input {
+  min-width: 60%;
+}
+
+.btn-grp {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.form-btn {
+  height: 3em;
+  width: 100%;
+  margin: 0px 5px;
+  border: 1px solid var(--black);
+}
+
+.form-fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.form-input-field {
+  display: flex;
+  font-weight: bold;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.label-bold {
+  font-weight: bold;
+}
+
+.form-btn__submit {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.form-btn__reset {
+  background-color: var(--white);
+  color: var(--black);
+}
+
+.form-btn__reset:hover {
+  background-color: lightgray;
+}
+
+.form-btn__submit:hover {
+  border: 1px solid var(--violetred);
+  background-color: var(--violetred);
+  color: var(--white);
+}
+
+@media (max-width: 414px) {
+  .form {
+    width: 100%;
+  }
+  .form-field {
+    padding: 15px;
+  }
+}
 /* Code for exercise 03-starships */
 
 .btn-group {
   margin: auto;
-  width: 400px;
+  width: 30%;
   display: flex;
-  justify-content: space-evenly;
-  margin-bottom: 20px;
+  justify-content: space-between;
+  padding-bottom: 20px;
 }
 
 .btn {
-  width: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 6em;
   padding: 10px;
+  background-color: var(--black);
+  color: var(--white);
+  cursor: pointer;
+  border: none;
+}
+
+.btn:focus {
+  background-color: var(--violetred);
+}
+
+.spaceship {
+  display: grid;
+  background-color: var(--white);
+  border-radius: 10px;
+  height: 30vh;
+  width: 46%;
+  margin: 10px;
+  padding: 15px;
+  font-size: smaller;
+}
+
+.ship-name-credits {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.spaceship-margin {
+  margin: 1px 0;
+}
+
+.spaceship-atmos-credits {
+  display: grid;
+  grid-template-columns: 1fr 50px 1fr;
+}
+
+.spaceship-grid-ctr {
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+.spaceship-bold {
+  font-weight: bold;
+}
+
+.spaceship-med {
+  font-size: medium;
+}
+
+.atmos-cargo {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.atmos-speed-pl {
+  padding: 0px 20px;
+}
+
+.spaceship-divider {
+  color: var(--light-gray);
+  grid-column: 2/3;
+  grid-row: 1/3;
+  position: relative;
+  width: 70px;
+  top: 25px;
+  right: 5px;
+  transform: rotate(90deg);
+}
+
+@media (max-width: 414px) {
+  .btn-group {
+    width: 100%;
+    justify-content: space-evenly;
+  }
+  .spaceship-divider {
+    width: 80px;
+    top: 30px;
+    right: 25px;
+  }
+  .spaceship {
+    width: 100%;
+  }
 }

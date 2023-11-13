@@ -12,6 +12,99 @@
     <main>
       <h1>Exercise 02 - Form</h1>
       <!-- You can reuse the form you created in HW 2 -->
+      <div class="form">
+        <h2 class="form-header">Sign Up Form</h2>
+        <p class="form-filler-text">Fill up the items in the form below</p>
+        <form id="form-cls" class="form-field">
+          <div class="form-input-field">
+            <label for="name" class="form-label">Name: </label>
+            <input
+              class="form-input"
+              type="text"
+              id="name"
+              autocomplete="off"
+            />
+          </div>
+          <br />
+          <div class="form-input-field">
+            <label for="uname" class="form-label">Username: </label>
+            <input
+              class="form-input"
+              type="text"
+              id="uname"
+              autocomplete="off"
+            />
+          </div>
+          <br />
+          <div class="form-input-field">
+            <label for="email" class="form-label">Email: </label>
+            <input
+              class="form-input"
+              type="email"
+              id="email"
+              autocomplete="off"
+            />
+          </div>
+          <br />
+          <div class="form-input-field">
+            <label for="password" class="form-label">Password: </label>
+            <input
+              class="form-input"
+              type="password"
+              id="password"
+              autocomplete="off"
+            />
+          </div>
+          <br />
+          <div class="form-input-field">
+            <label for="date" class="form-label">Date of birth: </label>
+            <input
+              class="form-input form-field-date"
+              type="date"
+              id="date"
+              autocomplete="off"
+            />
+          </div>
+          <br />
+          <fieldset class="form-fieldset">
+            <legend class="label-bold">Preferred Pronouns</legend>
+            <div>
+              <input type="radio" id="she" name="pronouns" value="she/her" />
+              <label for="she">She/her</label>
+            </div>
+            <div>
+              <input type="radio" id="he" name="pronouns" value="he/him" />
+              <label for="he">He/him</label>
+            </div>
+            <div>
+              <input type="radio" id="they" name="pronouns" value="they/them" />
+              <label for="they">They/them</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                id="preferred"
+                name="pronouns"
+                value="i prefer not to say"
+              />
+              <label for="preferred">I prefer not to say</label>
+            </div>
+          </fieldset>
+          <br />
+          <div class="btn-grp">
+            <input
+              class="form-btn form-btn__submit"
+              type="submit"
+              value="Submit"
+            />
+            <input
+              class="form-btn form-btn__reset"
+              type="reset"
+              value="Reset"
+            />
+          </div>
+        </form>
+      </div>
     </main>
   </body>
 </html>
